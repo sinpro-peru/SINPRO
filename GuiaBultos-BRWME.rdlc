@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>c0647600-2fae-417c-a1a8-cb43b75e7d60</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=SERVER;Initial Catalog=MIL-26;User ID=HugoEstrada; Password=Hugo16096946</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="Inicio">
+      <DataType>Integer</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.5cm</RightMargin>
+  <LeftMargin>0.5cm</LeftMargin>
+  <rd:ReportID>28a434d6-fdf2-4e5c-8042-80e55d40b62f</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo_agsa_2">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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
+OouZcztc3Y9QOkWsVsFSaOGLe0idDz2rSttXtrmUxZMbrs4fvuG4VyaXN4ujC2O97X7Nneqcbt/8AerS0myF5fy+ZnZGsL/73yU1eybVhXi2+V3sLrVhHHqKytFERI2dz3Gw1Vm0+3a7K6fDFcJHtfP2mt3WLmxikhivQGU5KhlJ5rnNHSaZ5BZXluH2Hd+5K/L/3zVK6XMjOcouSpyW/6Bev9vu0uZ4bTzAykYu1X7v/AAKuvsoFG65KBZ51BfByK46ztPt9z5FvcWxkVN+GhK/Ln6V2llDNBZxxzuHkVcEjpUcii27as1VTnVr3S/DuWaKKWmAlLijvRQAlFLRQAlFLSYoAKKMUuKAEopcUUAJRilooAMUYoooAMUYoooAKKKKACjFFFABikxS0UAJiilooASilooASilooASilooATFLiiigAooooAKKKKACiiigAooooAKSlooApNYxnUI7xTtdFKkAferjb2OHETB2fbNM33Nv8ACtdVrMlxCls0EjJ++UPjutc9dabdQBN0LsDJK7MvzbVwP++aa01M6kXJctrr+rFaOe5uNHSxtydj2oZY1X+LfXTaNYyWjTSSjDyrGuP91Kz/AA9ZOs0E+zEaW+zPvuNdRinKV2xUqbilfe1vIyNcg3WyTBpQ0bf8s++aw7y8M1wzpFe23yquxAorr54UniMcihlPrXN3Gm31zfGeXT4Xf5RvWUrwP+BVOhcr6WLeh2Tp/pbyz5IKeVKuK3aWigoKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAxRiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAgubeGdR56qUQ7xnsao2N8L+W8iaSGSON9gEeenvWjNGssTRtkBxjIrF0SwksGnhK4Acc+WFyMevepfNdW2KVrO5togRQq9BT6BRVEhRRRQAUUUUAFFFFABRRRQAU
+UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUGgAooooAKKKKACiikoAWikpaACiiigAoopKAFopKKAFopKKAFooooAKKQ0UALRSUUALRSUUALRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//Z</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>21.1cm</PageWidth>
+  <DataSets>
+    <DataSet Name="MELDataSet_Table_GuiaBultos">
+      <Fields>
+        <Field Name="Cliente">
+          <DataField>Cliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Factura">
+          <DataField>Factura</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Destino">
+          <DataField>Destino</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BultoN">
+          <DataField>BultoN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BultoM">
+          <DataField>BultoM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MELDataSet</rd:DataSetName>
+        <rd:TableName>Table_GuiaBultos</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>20cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Table Name="table1">
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>3.6cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>50</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1 AND Parameters!Inicio.Value = 1, "BUSQUE SU FACTURA EN ESTE BULTO" , "")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.7cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox38">
+                      <rd:DefaultName>textbox38</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>45</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 1, First(Fields!Cliente.Value, "MELDataSet_Table_GuiaBultos"), ""), First(Fields!Cliente.Value, "MELDataSet_Table_GuiaBultos"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>3.75cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox37">
+                      <rd:DefaultName>textbox37</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>38</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 1, First(Fields!Factura.Value, "MELDataSet_Table_GuiaBultos"), ""),  First(Fields!Factura.Value, "MELDataSet_Table_GuiaBultos"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox19">
+                      <rd:DefaultName>textbox19</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>37</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox6">
+                      <rd:DefaultName>textbox6</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>15pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>36</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 1, First(Fields!Destino.Value, "MELDataSet_Table_GuiaBultos"), ""), First(Fields!Destino.Value, "MELDataSet_Table_GuiaBultos"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.75cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox23">
+                      <rd:DefaultName>textbox23</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>29</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 1, Fields!BultoN.Value, ""), Fields!BultoN.Value)</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>28</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>15pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>27</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 1, First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos"), "") , First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos"))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.25cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox17">
+                      <rd:DefaultName>textbox17</rd:DefaultName>
+                      <Style>
+                        <Color>Red</Color>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>22pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>2.02646cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox8">
+                      <rd:DefaultName>textbox8</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>3.45cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>20pt</FontSize>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>24</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1 AND Parameters!Inicio.Value = 2, "BUSQUE SU FACTURA EN ESTE BULTO" , "")</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.3cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox24">
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>19</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, 
+IIF(Parameters!Inicio.Value = 2, First(Fields!Cliente.Value, "MELDataSet_Table_GuiaBultos"), 
+iif((Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1)))&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) 
+or (Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1))) &lt;= 0,"",First(Fields!Cliente.Value, "MELDataSet_Table_GuiaBultos"))),
+
+iif((Fields!BultoN.Value + 1)&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) 
+or (Fields!BultoN.Value + 1) &lt;= 0,"",First(Fields!Cliente.Value)))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>3.75cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox33">
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>12</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 2, First(Fields!Factura.Value, "MELDataSet_Table_GuiaBultos"), iif((Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1)))&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1))) &lt;= 0,"",First(Fields!Factura.Value, "MELDataSet_Table_GuiaBultos"))) , iif((Fields!BultoN.Value+1)&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value + 1) &lt;= 0,"",First(Fields!Factura.Value, "MELDataSet_Table_GuiaBultos")))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox39">
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>11</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox40">
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>15pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>10</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 2, First(Fields!Destino.Value, "MELDataSet_Table_GuiaBultos"), iif((Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1)))&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1))) &lt;= 0,"",First(Fields!Destino.Value, "MELDataSet_Table_GuiaBultos"))), iif((Fields!BultoN.Value+1)&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value + 1) &lt;= 0,"",First(Fields!Destino.Value, "MELDataSet_Table_GuiaBultos")))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.75cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox49">
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>5pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>3</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 2, Fields!BultoN.Value, iif((Fields!BultoN.Value + (1 - (Parameters!Inicio.Value - 1)))&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1))) &lt;= 0,"",Fields!BultoN.Value + (1 - (Parameters!Inicio.Value - 1)) )) , iif((Fields!BultoN.Value + 1)&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value + 1) &lt;= 0,"",Fields!BultoN.Value + 1 ))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox50">
+                      <Style>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>2</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox51">
+                      <Style>
+                        <BorderColor>
+                          <Bottom>Black</Bottom>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Bottom>None</Bottom>
+                        </BorderStyle>
+                        <BorderWidth>
+                          <Bottom>1pt</Bottom>
+                        </BorderWidth>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>14pt</FontSize>
+                        <TextAlign>Left</TextAlign>
+                        <PaddingLeft>15pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <ZIndex>1</ZIndex>
+                      <CanGrow>true</CanGrow>
+                      <Value>= IIF (Fields!BultoN.Value = 1, IIF(Parameters!Inicio.Value = 1, First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos"), iif((Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1)))&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value+(1 - (Parameters!Inicio.Value - 1))) &lt;= 0,"",First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos"))), iif((Fields!BultoN.Value+1)&gt;(First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")) or (Fields!BultoN.Value + 1) &lt;= 0,"",First(Fields!BultoM.Value, "MELDataSet_Table_GuiaBultos")))</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>1.25cm</Height>
+            </TableRow>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ColSpan>3</ColSpan>
+                  <ReportItems>
+                    <Textbox Name="textbox26">
+                      <rd:DefaultName>textbox26</rd:DefaultName>
+                      <Style>
+                        <Color>Red</Color>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontSize>22pt</FontSize>
+                        <TextAlign>Center</TextAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>5pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>2.05291cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <TableColumns>
+          <TableColumn>
+            <Width>3cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>7.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>6.25cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>27.62937cm</Height>
+        <Left>3.25cm</Left>
+      </Table>
+    </ReportItems>
+    <Height>28.26429cm</Height>
+  </Body>
+  <Language>es-ES</Language>
+  <TopMargin>1.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

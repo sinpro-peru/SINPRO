@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="MELPRUEBAConnectionString">
+      <rd:DataSourceID>ea6e8665-79e1-49e6-8da1-37d5f266c38d</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=SERVER;Initial Catalog=MIL-26;User ID=HugoEstrada; Password=Hugo16096946</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+    <DataSource Name="TestConnectionString">
+      <rd:DataSourceID>8d999b55-8e8d-4e74-8c8d-143d4c72cbb3</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=LARRY-LAPTOP;Initial Catalog=Test;Integrated Security=True</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="Vendedor">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_0</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Fecha1">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Fecha2">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Report_Parameter_2</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1cm</RightMargin>
+  <LeftMargin>1cm</LeftMargin>
+  <BottomMargin>0.7cm</BottomMargin>
+  <rd:ReportID>6873cec7-5aae-4867-98ca-6fd4e8ed516d</rd:ReportID>
+  <EmbeddedImages>
+    <EmbeddedImage Name="logo_agsa">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABhAUADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iobq6itITJKwUdBk4yaxbrWLozK1tsNtuA81VJHJ6EnvQB0FFcxY6xfi4eK5uIGVWYl3Xb8oPQY71Z1DXZbPSra7gjW5824EZ+UrhTnnHPTFWoNy5UZyqqEOeWn9eRvUVjxa20pCpbFnaMOiBuWO7GPy5q7G1xC8jXUsPkk
+5U9CM9qg0LdFFVL+/isIg8uctkKAOpoAt0Vy011rE1ul1DKPmJbYvCqg6kn19qtJrrx6Y1xL8xAI3bcAOBnGB1+tOwuZam/TJJY4V3SOqL6scVwWpeML1VgQCLyZ0yWCkMBxyOavXF7HqDwi5Z0WOPGR825vWrnSlBKUupjSxNOrOUIPWNr/AD1R1K6haPKIluI2c9AGqzXH2ki209nPdJH5PlsBtGSfqPXJrI8VeJI9JtVu7m58yac4itY9ylsd8HoPeszc9Hor51vviJ4nvWITUpLaM9Eh4I/HrU0Ft8Qb6IXEX9tujdGLsufzIoA+hKK+f/7K+Iv9zWv+/wAf8ar30XjvTbVrm8fWYYF+9I0rYX64PFAH0RRXzNb+MPEdo4aHW70EHOGkLA/UGvcvCfikax4Oi1i/2xOm5JiBwWU4yB7+lJtJXYJNuyOnorg9S8ZXc7sliogi7MRlz/QVnwT69qGWglvZgO6k4/OvOlmdPm5YJy9D0Y5dU5eabSPTKK85+x+Jf7t//wB9n/Gj7H4l/u3/AP32f8aX9oS/59SD6hH/AJ+I9Gorzn7H4l/u3/8A32f8asWOl+Ibq6WOaa7t4uryPIeB7c9aqOPlJ2VJieBild1Ed9RXGan4q+xj7FpfziIbTcSHdk+3r9axF1TWr6XZHdXUjn+GP/AUVMzpQlypNvyCnl1SS5m7LzPTqK84+x+Jf7t//wB9n/Gl+x+Jf7t//wB9n/Gp/tCX/PqQ/qEf+fiPRqK85+x+Jf7t/wD99n/Gj7H4m/u3/wD32f8AGj+0Jf8APqQfUI/8/EejUVwWr+K7bwJpyQXUsl/q867/ACTISEHbJ7D9TXmmpfEXxRqs3y6g9spPyxWi7fwz1NejBuUU2rHBNKMmk7n0RRXz7HZfEO5jEyLrhVuQTIy5/Amnf2V8Rf7mtf8Af4/41RJ9AUV86aj/AMJxpNv9ov5dYt4c48x5W2g+5B4qpZ+NPEtjKkkOs3bbTnZ
+K+9T9QetAH0tRWV4a1c694csdTaMRvcR7mUdAwODj2yK1aAIZrWG4dGmTeE5Ct0z64qTy49mzYu30xxTqzNduJLbTd8UyQsZEUs44wTyKaV3YmUuVNs5TyjFemPa8mZ8MGbJGW559KlS+u/Mmso4mVJJM+cJPvHpt29hz+lPNvC0yyGceZ9p/1QyD97rmq+nXHmagBcWk0fz/ACncMbs8fWqipNuT1/r+u5E3GPLFXXovwe/6Fu11SPT7q1LzrGjhYmypOTuPAwPer+p3d1e30mmxhAhYLz375zXO2vm3d3HZwzRPdBsuApHHt6V21lpENttkk/fXGcmRuefaicVG3cVObm2+n9X6v9CHSUvraOVbwHyxyGLZPHHA9Kr3erLdO8VrHHKkcbO5lyAQOoFaGoC6JhMFxFBEGHms5wSvcD3rOtrfR2Jto5d80hO1j9714rPc32MptXimt4lmg2QBcRrEWHJ6Z5qGyS0vr2UfZnDxIyj9423djdz+Fb76GzIsRdPLZt8gUYywyBj0BHWluZ9St3hto9PiaB/lllRsCNeeffFXTvdq/wChlV5bJtbP19DnluYbuJ2FnERaFYeSepyR9akkdmSO4uLWISTguRG7YznBqzptvBZR3Sx6hCWuCWdQC24BSMDjioLSaGzkMxuYiPLYHcjY6fSqm1tHYmnGdrz31/PT8DN1K/stJhe5vSUhUA7Y8tu4ztB9TXketaxc67qst/dN8z8ImeI0HRR9BWl4u8QDWtR8q2CrYwErHtziQ93Of0qbwP4Ql8V6ttk3pp8GDcSrwT6KD6n9BWZsV/CGqaNourjUNWtZ7poeYI4wCob+8cnt2r0r/hc2jf8AQOvvyX/Gr3/Co/C/928/7/8A/wBaj/hUfhf+7ef9/wD/AOtQBR/4XNo3/QOvvyX/ABrkvHPxFPiazi0/T4prazzun8zG6QjoOO3epfiB4b8MeFraK2sVuH1Of5gHmyI07sRjv0FefIjSOq
+IpZ2IVVUZJJ6AUxGn4e0K58R61Dp1t8u/5pJMcRoOrH/PWvUNTubaK3g0jTF2adZjagH/LRu7H171X07TV8H6B/Z6kf2teqHvZB/yzXtGD/nvUNtbS3dxHbwJukc4UV4eZYpyfsKfz/wAj2cvwyivbT+X+Zc0XSZNXvhCuViX5pX9B/ia9NggjtoEhhQJGgwqjsKqaRpcWk2K28eC55kf+81XJU8yJkDsm4Y3L1H0rtwWFWHhd/E9/8jjxmJ9vOy+Ff1cw9Q8WWNhePbbJJWThimMA+lVv+E4sv+fW4/T/ABpl/wCF9F0+0kuria6Crz/rBlj6dOpriWKlyVBVc8AnJArhxOLxVGVpNK/Q7sPhcNWjeKenU7keN7NiFW0uCScADHJ/Om+KNea3tFsoQ0dxMgMnPMant9TVTwhonmuNTuF+RT+5U9z/AHv8K6DUfD2n6pcCe4RxLjBZGxkV0Q+t18O3dJvbpoYT+q0a6VtF+Z5lXUaL4h0zR7MRJbTtK3MkmB8x/PpWz/whmlf9N/8Av5/9aj/hDNK/6b/9/P8A61ctHA4qjLmha50VsbhqseWV7EH/AAnFl/z63H6f40f8JxZf8+tx+n+NTnwbpIBJ88AdSZK4nUhZrfSJYB/s6/KGZslj6/SrxFfGUEnNrUihQwld2gmdePHFjn5ra4A9cA/1q1r3iqx0Tw2dXdt6uv7iPoZHPQf41w+m2S3k7GaQRWkKmS4mPARB1rg/F/iZvEmqhogY9Pth5dpD/dX+8fc11ZfWr1k5VNuhzY6jRotRhuZGo6hdatqM9/eSGS4nbc7f0HsOldB4J13RPDl++o6laXFzdrxAIwu2Md25P3v5VZ8AeCG8VXclxeb49Mg+V2U4Mj/3QfbqTXov/Co/C/8AdvP+/wD/APWr0jzyj/wubRv+gdffkv8AjR/wubRv+gdffkv+NXv+FR+F/wC7ef8Af/8A+tXn/wAQdD8N+G5otO0tZ3vzh5mebcI07
+DGOp/l9aQyPx348fxW0Ntaxy2+nxfMY3PzSP6nHYdqyvCHhmbxTrsdmu5bZPnuZR/Cnp9T0FYttbTXl1Fa20bSTzOEjRerE19HeDvDEPhbQo7RcNcyfPcSj+N/8B0FMRtWtrBZWkVrbRrHDEoREUcACpqKKQwqve2y3Vq0TKG5BAPqDmrFFAHCy29zb6/skZPK8wELjk5PXPpXR2/h+2tdQa+geRZHQqysdw7dAeh4q9dWMF3tMi4ZWDBlxnjtn0qpLJdWt3bvcZmRj5eY/lVSSMEjvVc76Gfs49ddb6lu0hKBmkjjEm4gOqgEr26VPJIsUbSOcKoyTS7gGCkjJ6Cobzd9kl2RiRtvCHv7VJpaxymr6hcTPvmDxW5xtQnIOD1qC208GWzmS5Zp4oGIaU56OTtFQyxwgARySyZ+8JPuqfRR2H9a1Utba6tlltpZIBa8s0o6knIxz61SlKN0nozNwjOzktV/SKC6peXLy7riSKSJmCbyVG78O1WRHJqtu8d5qLbkTfiFjzjn0p9pNp53CaO4uLiTd8ypzz7Z69aba6npFldo6w33mF2iAkVccDk0JPm5ohKUVDkqdf10sM0xI7DVZzeyJ5gQMsZcHyuMZKg9DkVx3xF8QzO0mkaZBKWfH2yeGNtjDHCLx6cn8q7i5u9GS6uNRvb6zSNlVWXeN+35cDC/MWzxir83iQRIxh0XV7gAZHl2uM/TcRTnuhUtnZp6vY+etM0HU9W1GCxtbSbzZWwC8ZCqO5Jx0FfRnh3Qrbw5olvpttyIxl5MYMjnqxry7xH4q8c6hqnl/2bqvhvQV/wBZcw2X2i4IHf5c4/Dp3JrqPD3hDw1relQarDq2satFOpIuLjUJhuOcH5QQByCMYqDU76srxFrcXh/Rpr+SN5WUYjiRSTI56Dj+dcdr1xY+Bn3aZ4iktrgLv/s2+kkuIph6Dq0ZOOCDj2qvZ/GiwmjjN14b12FmALFLbzFH0ORkfhQB5Xqc2q6x
+qU+oXsFzJcTNuY+U2B6AcdB0r0b4WeC2Mg8Q6lCV2ki0ikXBz3cg/kPzrq7T4m+GrkEySXtoB1N1ZSoB+O3FdBda7p1ppsGovcB7S4kiiiliG8MZGCpjHYlhzQBxOuaLqMGpXExgkmikcuJEG7g+tUbK4v8ATZjLbJJHIRjJizx+Ir01L6zkmMKXUDSgkbFkBbP0py3drJHJIlxCyR/fYOCF+p7V5UsrXPzwm0enHMnyck4pnn//AAkevf8APV/+/I/wo/4SPXv+er/9+R/hXoH2u1LRr9ohzINyDePmHqPUVUstd0nUbSK6tdQt5IZmKxtvA3EHBAz3zV/Uav8Az+f9fMn67S/59L+vkee317qeo7ftbTSBeVXZgD8AKp+RN/zxk/74NepzanY2+o22ny3Ma3dyGMUWfmYKMn9Kk+22nlrJ9qg2M2xW8wYLegPrWMsp5neVS79P+CaxzNRVowsvX/gHn8ev65FGscbsqKAFUQDAH5U7/hI9e/56v/35H+Fegx3NvLK8Uc0TyJ99FYEr9R2qrNrWm2+s22kTXcaahcxtJDAfvOq9SK1+o1f+fr/r5mX12l/z6X9fI4j/AISPXv8Anq//AH5H+FH/AAkevf8APV/+/I/wruL3WNN06ykvLu9gjt4xudywIAztzx78VYW6tmdUWeIsyb1AcZK+o9ven9Rq/wDP5/18w+u0v+fS/r5Hnc+r65ewtDI87I3BCRYz7cCo7Pw5ql4wC2rRL/fl+UCvRvt9mIPP+1weSTt8zzBtz6ZzjNLJe2sRIkuYlIQyEFxnb/e+nvU/2Ypu9Wbf9fMf9ouKtTgkeIeM9XmWBvDukxXD2kb5u7hYm/0iQdhx90frXN6D4Y1LX9XhsILeWLecySyRkLGvdjn+VfRtnq+nX9hbXtteQvbXQBgk3AB89MZ7+1WIrm3mkeOGeKR4+HVHBK/UDpXpQjGEVGK0R585OcnKW7K+k6XbaNpdvp9om2GBAo9T6k+
+5PNXawJfGmgxm9AvGl+xLIbhooXdU2AlhuA25AHTNaNlrFjqFjbXkFwpiuYBcRhvlYxkZB2nnpVEmd4u8Rjw1oj3KQvPdP8lvEqltzepx2HU1873Sale3c11dQ3Us8zF5HaJskn8K+mbXWNNvdOi1CC9ge0kAKTFwFOenXofaoodf0648QT6HFKWvobdbl12Hb5bHAIboaAOG+Fvgw2FuNe1GErdTLi2jcYMaH+Ij1P8AL616ZWJbeLdEvNVbTLa9M10krQsEicqHXqpbG3I+tXJda02DWoNHlu411G4iaWKA53Mg6mgC/RRRQAUUUUAFNdFkUq6hlPYinUUAcffiO41RWtZ2j+YQqGchWc+mPpSWTTaDLKjszyAY8t5CxOeQ2fQf1qzdWv8AYFyZbW5lP2pyziXDhMf3R26ms+9nSO5FnFMSCiTFD1JI61STV1HVbmfMnyymrPbf8vU2bSwsNSiSeRfLmkyTGj4HXqBVnVraODSPLQyJCmAVQA5Gfeudg1CK71CLflb8MDKAwwB24A+lb2iieXS5DdOWhYEJu6gY5pa7lpp3s72OZh8zTy179oupgCfKCwrwe4HPPBp9xbW0moWo+0SH95kyCMbRuXvz2zViFJE1AWrRC4t48OFEi4csOgGc+34U2K1na8xHAHZG3mNXBIGe/NXNy6aP9PyMacYWte6vs77p93rv8tOxNceCba+tGntcWl22ySJ5EL7JFYNuIz3x0967AZwM4z3xSjkDIxRUylKWsnc0hThTVoJL0CuP0jwxr3h62ey0zW7I2ImkkhhnsCWjDuXK7lcZwWPauwoqSyrYrfLERfzW8smeDBEyDH0LGrVFFAEF5FNPZTwwSiGV0KpIV3bCR1x3xWPd+FoJfDun6NbTGCGymtpUYruLCKRXwenJ29fet+igDz61+Ftra6vFqQu4zcJdi63i2AYkTmUjOe4OzPoPwqjpXwuuF0q6W9vbe3ubhVXy4LcMnyTmUGXkeb
+ngHOOOK9PooA4rR/h1Z6ff6ddXc0d4bKKYRoYNipJJN5u5Bn5QOVC88GsrUfhRJe6Bb6RFrMUEEEk7KUsgCwkII3YYfMvTPfjjivSqKAODl+G/na/c6k+q8XEcysRbjzwZIREcSbvujG4DHBJpll8L7WOGCG/ube6gW6E8luloIonAgMIAUMcHkMW7kV39FAHGad4ElsfHcviRtWMqt5gWDyApCuAAu4HkDHpSal4BbUvEcmvnWJ49QS4hktQqfu4kj42Fc/NnL5OR9/2rtKKAPPV+GP8Aomp2kmqo9vc2zW9sDajMIMzTAt83zkM3oOKsn4fuPEK6x9uhLLiTyktQjbxCYtivu+WLnOzB5713NFAHl+m/Cu7j8Kmwm1SC1uZ/sxnjt7UeV+6QrtIzlmO45fgnA4rd0j4eWVhLZy3ssd/Ja6dHYxNJDgrtMmWHJ6iTGPauzooA8+t/hk1vceHJ11YBtGjEW1bbasyh9wON3DHoTznrWn4O8FP4TvNQmGoiaG6wVt0h2LGdxJOSxJJz6111FAHm8vwsna7uTFr7pZyrdKkPkHIE4bIYhwGAZyR8uferFh8MRZalp90dUEi2kcIybYCUtHEYgFfd8sZzkpg8969AooA81t/hTLb6Jc2EetJG05gDGKyCoyx5+8u7lm3ctkHgVr+E/AR8Maut+dSN1jTY7DYYdvCMW3Z3H1xj2612dFAHDL4CvYvE0ms2usRWZMssqxW9syhmcEDzB5m1hkgn5QSR1FOuvh/Lea+Nfm1qYarHPDJEyR4iVI1wUKZ53Ayc5/j9q7eigCvZR3UVoiXlwlxcDO6VI/LDcnHy5OOMDrViiigAooooAKKKKAK17ZQ30BjlAzj5W7qfWuQ1yGF7z7O0gcRxoPlfBOFxng127DcjKe4xXJxeHd8bTZWO7wf3ZUbio/X0qouzuROPMrWuutzN0Tzb9LRbJFWJH3tvQFtoJzluv612tpaCDTo7VznCbWx79aq6N
+phsY2eTbvcAAAYwP8a1Kc5c0rk0afs4JPf7l93Q4SdUspFTYI51lZVm6F8YwB9Ov41u+HtO8pn1BxiSZdvK8kZznNWNR0KLULhZTKUK8425wfUehxWpGgiiWNeigAUm9NClHXVLyHUUUVJYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFYm2Y+KS8uRGIdqAdCNwOf51t0mASDgZHek0nuNNoWiiimIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA/9k=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <PageWidth>29.7cm</PageWidth>
+  <DataSets>
+    <DataSet Name="MELDataSet_sp_consultaLogo">
+      <Fields>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="direccion">
+          <DataField>direccion</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>MELPRUEBAConnectionString</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.sp_consultaLogo</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MELDataSet</rd:DataSetName>
+        <rd:TableName>sp_consultaLogo</rd:TableName>
+        <rd:TableAdapterName>sp_consultaLogoTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="MELDataSet_sp_consultaNCPendientes">
+      <Fields>
+        <Field Name="NroControl">
+          <DataField>NroControl</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ControlInicio">
+          <DataField>ControlInicio</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="RazonSocial">
+          <DataField>RazonSocial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Monto">
+          <DataField>Monto</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="Observacion">
+          <DataField>Observacion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Iva">
+          <DataField>Iva</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Tipo">
+          <DataField>Tipo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoNotaCredito">
+          <DataField>CodigoNotaCredito</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MontoTotal">
+          <DataField>MontoTotal</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Nombre">
+          <DataField>Nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CodigoVendedor">
+          <DataField>CodigoVendedor</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>TestConnectionString</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>dbo.sp_consultaNCPendientes</CommandText>
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>MELDataSet</rd:DataSetName>
+        <rd:TableName>sp_consultaNCPendientes</rd:TableName>
+        <rd:TableAdapterName>sp_consultaNCPendientesTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>27.27646cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Textbox Name="textbox37">
+        <Top>5cm</Top>
+        <Width>1.90873cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>9</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Vendedor:</Value>
+      </Textbox>
+      <Textbox Name="textbox36">
+        <Top>5cm</Top>
+        <Width>6.25cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.65873cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Parameters!Vendedor.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox35">
+        <Top>4cm</Top>
+        <Width>2.53968cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <Left>6.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Parameters!Fecha2.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox33">
+        <Top>4cm</Top>
+        <Width>0.5cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <Left>5.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value> y</Value>
+      </Textbox>
+      <Textbox Name="textbox24">
+        <Top>4cm</Top>
+        <Width>2.53968cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <Left>3.25cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>=Parameters!Fecha1.Value</Value>
+      </Textbox>
+      <Textbox Name="textbox32">
+        <rd:DefaultName>textbox32</rd:DefaultName>
+        <Top>4cm</Top>
+        <Width>2.53968cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <Left>0.75cm</Left>
+        <Height>0.63492cm</Height>
+        <Value>Período: Entre</Value>
+      </Textbox>
+      <Table Name="table1">
+        <ZIndex>3</ZIndex>
+        <DataSetName>MELDataSet_sp_consultaNCPendientes</DataSetName>
+        <Top>6.25cm</Top>
+        <Width>26.27646cm</Width>
+        <Details>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox14">
+                      <rd:DefaultName>textbox14</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <Value>=Fields!Tipo.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox3">
+                      <rd:DefaultName>textbox3</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <Value>=Fields!Fecha.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox10">
+                      <rd:DefaultName>textbox10</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <Value>=Fields!ControlInicio.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox23">
+                      <rd:DefaultName>textbox23</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <Value>=Fields!RazonSocial.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox11">
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <TextAlign>Right</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <Value>=Fields!Monto.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox30">
+                      <rd:DefaultName>textbox30</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <TextAlign>Left</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Nombre.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox17">
+                      <rd:DefaultName>textbox17</rd:DefaultName>
+                      <Style>
+                        <BorderColor>
+                          <Default>Silver</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>=Fields!Observacion.Value</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Details>
+        <Header>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox13">
+                      <rd:DefaultName>textbox13</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Tipo N.C.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox2">
+                      <rd:DefaultName>textbox2</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Fecha</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox1">
+                      <rd:DefaultName>textbox1</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Fact.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox22">
+                      <rd:DefaultName>textbox22</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Razon social</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox9">
+                      <rd:DefaultName>textbox9</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Monto</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox29">
+                      <rd:DefaultName>textbox29</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Vendedor</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox15">
+                      <rd:DefaultName>textbox15</rd:DefaultName>
+                      <Style>
+                        <Color>White</Color>
+                        <BackgroundColor>Silver</BackgroundColor>
+                        <BorderColor>
+                          <Default>White</Default>
+                        </BorderColor>
+                        <BorderStyle>
+                          <Default>Dotted</Default>
+                        </BorderStyle>
+                        <FontFamily>Eras Medium ITC</FontFamily>
+                        <FontWeight>600</FontWeight>
+                        <TextAlign>Center</TextAlign>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value>Obs. N.C.</Value>
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Header>
+        <TableColumns>
+          <TableColumn>
+            <Width>2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>1.75cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>6.77646cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>2cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>5.5cm</Width>
+          </TableColumn>
+          <TableColumn>
+            <Width>6.25cm</Width>
+          </TableColumn>
+        </TableColumns>
+        <Height>1.90476cm</Height>
+        <Footer>
+          <TableRows>
+            <TableRow>
+              <TableCells>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox16">
+                      <rd:DefaultName>textbox16</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox4">
+                      <rd:DefaultName>textbox4</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox7">
+                      <rd:DefaultName>textbox7</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox34">
+                      <rd:DefaultName>textbox34</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox12">
+                      <rd:DefaultName>textbox12</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox31">
+                      <rd:DefaultName>textbox31</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+                <TableCell>
+                  <ReportItems>
+                    <Textbox Name="textbox20">
+                      <rd:DefaultName>textbox20</rd:DefaultName>
+                      <Style>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                      <CanGrow>true</CanGrow>
+                      <Value />
+                    </Textbox>
+                  </ReportItems>
+                </TableCell>
+              </TableCells>
+              <Height>0.63492cm</Height>
+            </TableRow>
+          </TableRows>
+        </Footer>
+        <Left>0.55556cm</Left>
+      </Table>
+      <Textbox Name="textbox55">
+        <rd:DefaultName>textbox55</rd:DefaultName>
+        <Top>3cm</Top>
+        <Width>27.25cm</Width>
+        <Style>
+          <FontFamily>Eras Medium ITC</FontFamily>
+          <FontSize>12pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.63492cm</Height>
+        <Value>Reporte de Notas de crédito pendientes</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Width>7.99193cm</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Database</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Left>0.75cm</Left>
+        <Height>2.5cm</Height>
+        <Value>=First(Fields!Logo.Value, "MELDataSet_sp_consultaLogo")</Value>
+      </Image>
+      <Image Name="image2">
+        <Sizing>Fit</Sizing>
+        <Width>7.25cm</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Database</Source>
+        <Style />
+        <Left>19.5cm</Left>
+        <Height>2.25cm</Height>
+        <Value>=First(Fields!direccion.Value, "MELDataSet_sp_consultaLogo")</Value>
+      </Image>
+    </ReportItems>
+    <Height>12.5cm</Height>
+  </Body>
+  <Language>es-ES</Language>
+  <PageFooter>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="textbox28">
+        <Top>0.25cm</Top>
+        <Width>4.01984cm</Width>
+        <Style>
+          <FontSize>8pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>12cm</Left>
+        <Value>=Globals!PageNumber &amp; " de "&amp;Globals!TotalPages</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>0.88492cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageFooter>
+  <TopMargin>0.7cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

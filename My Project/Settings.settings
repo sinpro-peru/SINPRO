@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="MELConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=LARRY-LAPTOP;Initial Catalog=Test; Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="Nro_Control_Editable" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Nro_Imp_Visible" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="CodigoFabricaFact" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CabezeraNC" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MELPRUEBAConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=LARRY-LAPTOP;Initial Catalog=Test; Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="DocsPrinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">HP Laserjet Professional P1606pn</Value>
+    </Setting>
+    <Setting Name="FactPrinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EPSON LX-300+/II (Copiar 1)</Value>
+    </Setting>
+    <Setting Name="NombreEmpresa" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Pruebas</Value>
+    </Setting>
+    <Setting Name="Empresa" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="UserLogin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test</Value>
+    </Setting>
+    <Setting Name="PedidosExpress" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="EmailEnvio" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EmailSMTP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">smtp.gmail.com</Value>
+    </Setting>
+    <Setting Name="EmailSMTPPort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">587</Value>
+    </Setting>
+    <Setting Name="EmailPass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RIFEmpresa" Type="System.String" Scope="User">
+      <Value Profile="(Default)">RIF</Value>
+    </Setting>
+    <Setting Name="NombreEmpresaLargo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Nombre</Value>
+    </Setting>
+    <Setting Name="Test" Type="System.String" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

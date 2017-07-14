@@ -1,0 +1,71 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastOpenVersion>7.10.3077</LastOpenVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ReferencePath>C:\Program Files\Business Objects\Common\2.8\managed\C:\Archivos de programa\Archivos comunes\Business Objects\2.7\Managed\C:\Documents and Settings\Melissa\Escritorio\TESIS NUEVA\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\BACKUP TESIS 31\TESIS NUEVA\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\TESIS NUEVA\TESIS NUEVA\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\TESIS NUEVA\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\Casi Listo\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\Casi ListoMEL\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\Casi ListoMEL2\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\Casi ListoMEL2\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\Casi ListoMELNOCHE\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\BACKUP 20.06.05\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\BACKUP 21.06.05\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\i\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\Me\i\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\Me\i\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\6.6.05\Me\i\Tesis Nueva\bin\;C:\Documents and Settings\Mel\Escritorio\6.6.05\Me\i\Tesis Nueva\bin\;C:\Documents and Settings\Melissa\Escritorio\CASI CUMPLE\6.6.05\Me\i\Tesis Nueva\bin\</ReferencePath>
+    <CopyProjectDestinationFolder>
+    </CopyProjectDestinationFolder>
+    <CopyProjectUncPath>
+    </CopyProjectUncPath>
+    <CopyProjectOption>0</CopyProjectOption>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectTrust>0</ProjectTrust>
+    <PublishUrlHistory>C:\Users\Administrador.SERVER\Documents\Proyecto\|C:\Users\Administrador.SERVER\Documents\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>
+    </InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
+    <FallbackCulture>es-ES</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <EnableASPDebugging>false</EnableASPDebugging>
+    <EnableASPXDebugging>false</EnableASPXDebugging>
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+    <EnableSQLServerDebugging>false</EnableSQLServerDebugging>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>
+    </RemoteDebugMachine>
+    <StartAction>Project</StartAction>
+    <StartArguments>
+    </StartArguments>
+    <StartPage>
+    </StartPage>
+    <StartProgram>
+    </StartProgram>
+    <StartURL>
+    </StartURL>
+    <StartWorkingDirectory>
+    </StartWorkingDirectory>
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+</Project>
