@@ -664,7 +664,7 @@ Public Class Frm_Login
 
             My.Settings.UserLogin = tb_login.Text.ToLower
             Dim texto As String = ""
-            Datos.RetornaDominio(texto)
+            'Datos.RetornaDominio(texto)
 
             If Frm_Principal.conex.State = ConnectionState.Closed Then
 

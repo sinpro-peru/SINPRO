@@ -96,18 +96,19 @@
     <Reference Include="Accessibility" />
     <Reference Include="DundasWinChart, Version=7.0.0.1784, Culture=neutral, PublicKeyToken=a4c03dce5db22406, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Dundas Software\Charting\WinControlVS2008\Bin\DundasWinChart.dll</HintPath>
+      <HintPath>Resources\DundasWinChart.dll</HintPath>
     </Reference>
     <Reference Include="DundasWinExtensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=162411ffeeeba8dc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Dundas Software\Charting\WinControlVS2008\Samples\bin\DundasWinExtensions.dll</HintPath>
+      <HintPath>Resources\DundasWinExtensions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="MTGCCombobox">
       <Name>MTGCCombobox</Name>
-      <HintPath>bin\MTGCCombobox.dll</HintPath>
+      <HintPath>Resources\MTGCCombobox.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="System">
@@ -1604,15 +1605,6 @@
     <None Include="Tesis Nueva_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Microsoft.Office.Core">
-      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>4</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <Private>True</Private>
-    </COMReference>
     <COMReference Include="VBIDE">
       <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>5</VersionMajor>
