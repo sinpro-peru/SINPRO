@@ -271,7 +271,7 @@ Partial Class Frm_Configuracion_Pedidos
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(23, 23)
         Me.Label34.TabIndex = 28
-        Me.Label34.Text = "Bs."
+        Me.Label34.Text = "$."
         '
         'Label35
         '
@@ -300,7 +300,7 @@ Partial Class Frm_Configuracion_Pedidos
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(23, 23)
         Me.Label32.TabIndex = 25
-        Me.Label32.Text = "Bs."
+        Me.Label32.Text = "$."
         '
         'Label29
         '
@@ -329,7 +329,7 @@ Partial Class Frm_Configuracion_Pedidos
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(23, 23)
         Me.Label30.TabIndex = 3
-        Me.Label30.Text = "Bs."
+        Me.Label30.Text = "$."
         '
         'Label31
         '
