@@ -165,7 +165,7 @@
 
         Else
 
-            If My.Settings.Empresa = 0 Or My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 0 Or My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
 
                 Dim frm As New Frm_impresionBultos_BRWME
                 'frm.recibe(DGV_TodasLasFacturas.SelectedRows(0).Cells(1).Value, Me.tb_bultos.Text, DGV_TodasLasFacturas.SelectedRows(0).Cells(4).Value, DGV_TodasLasFacturas.SelectedRows(0).Cells(3).Value)
@@ -186,7 +186,7 @@
 
     Private Sub bt_bultos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bt_bultos.Click
 
-        If My.Settings.Empresa = 0 Or My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+        If My.Settings.Empresa = 0 Or My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
 
             Dim frm As New Frm_impresionBultos_BRWME
             frm.recibe(tb_pedido.Text, Me.tb_bultos.Text, lbl_dest.Text, lbl_cliente.Text)

@@ -1470,7 +1470,7 @@ Public Class DatosDSS
 
                 command.Parameters.AddWithValue("@Marca", texto)
 
-                If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+                If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
 
                     If texto = "Líneas Varias" Then
                         command.Parameters.AddWithValue("@Tipo", 2)
@@ -2076,7 +2076,7 @@ Public Class DatosDSS
             command.Parameters.Clear()
             command.Parameters.AddWithValue("@Marca", marca)
 
-            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
 
                 If marca = "Líneas Varias" Then
                     command.Parameters.AddWithValue("@Tipo", 2)
@@ -2114,7 +2114,7 @@ Public Class DatosDSS
             command.Parameters.Clear()
             command.Parameters.AddWithValue("@Marca", marca)
 
-            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
 
                 If marca = "Líneas Varias" Then
                     command.Parameters.AddWithValue("@Tipo", 2)

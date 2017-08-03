@@ -306,6 +306,8 @@ Public Class Frm_Login
                     My.Settings.Empresa = 6
                 ElseIf cb_sesion.Text = "VENPER" Then
                     My.Settings.Empresa = 7
+                ElseIf cb_sesion.Text = "Perú" Then
+                    My.Settings.Empresa = 8
                 End If
 
             End If
@@ -448,6 +450,25 @@ Public Class Frm_Login
 
                     Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=192.168.0.2;Initial Catalog=VENPER;User ID=HugoEstrada; Password=Hugo16096946"
                     Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=192.168.0.2;Initial Catalog=VENPER;User ID=HugoEstrada; Password=Hugo16096946"
+
+                    Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
+                    Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"
+
+                ElseIf My.Settings.Empresa = 8 Then
+
+                    Tesis_Nueva.My.Settings.NombreEmpresa = "Perú"
+                    Tesis_Nueva.My.Settings.CabezeraNC = False
+                    Tesis_Nueva.My.Settings.Nro_Control_Editable = True
+                    Tesis_Nueva.My.Settings.Nro_Imp_Visible = True
+                    Tesis_Nueva.My.Settings.CodigoFabricaFact = False
+                    Tesis_Nueva.My.Settings.PedidosExpress = False
+
+                    If Not Frm_Principal.conex.State = ConnectionState.Open Then
+                        Frm_Principal.conex.ConnectionString = "Data Source=192.168.1.133;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                    End If
+
+                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=192.168.1.133;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=192.168.1.133;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
 
                     Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
                     Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"
@@ -656,6 +677,18 @@ Public Class Frm_Login
                     Tesis_Nueva.My.Settings.CodigoFabricaFact = False
                     Tesis_Nueva.My.Settings.PedidosExpress = False
 
+                ElseIf cb_sesion.Text = "Perú" Then
+
+                    My.Settings.Empresa = 8
+                    Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
+                    Tesis_Nueva.My.Settings.FactPrinter = "Epson LX-300+"
+
+                    Tesis_Nueva.My.Settings.CabezeraNC = False
+                    Tesis_Nueva.My.Settings.Nro_Control_Editable = True
+                    Tesis_Nueva.My.Settings.Nro_Imp_Visible = True
+                    Tesis_Nueva.My.Settings.CodigoFabricaFact = False
+                    Tesis_Nueva.My.Settings.PedidosExpress = False
+
                 End If
 
             End If
@@ -781,6 +814,24 @@ Public Class Frm_Login
 
                     Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=tcp:brwmesa.dyndns.org;Initial Catalog=VENPER; User ID=web; Password=Miami006"
                     Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=tcp:brwmesa.dyndns.org;Initial Catalog=VENPER; User ID=web; Password=Miami006"
+
+                    Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
+                    Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"
+
+                ElseIf My.Settings.Empresa = 8 Then
+
+                    Tesis_Nueva.My.Settings.NombreEmpresa = "Perú (Remoto)"
+                    Tesis_Nueva.My.Settings.CabezeraNC = False
+                    Tesis_Nueva.My.Settings.Nro_Control_Editable = True
+                    Tesis_Nueva.My.Settings.Nro_Imp_Visible = True
+                    Tesis_Nueva.My.Settings.CodigoFabricaFact = False
+
+                    If Not Frm_Principal.conex.State = ConnectionState.Open Then
+                        Frm_Principal.conex.ConnectionString = "Data Source=tcp:brwmesaperu.dyndns.org;Initial Catalog=SINPRO; User ID=web; Password=LimaPeru2017"
+                    End If
+
+                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=tcp:brwmesaperu.dyndns.org;Initial Catalog=SINPRO; User ID=web; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=tcp:brwmesaperu.dyndns.org;Initial Catalog=SINPRO; User ID=web; Password=LimaPeru2017"
 
                     Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
                     Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"
@@ -949,6 +1000,10 @@ Public Class Frm_Login
             cb_sesion.Items.Add("Comer. BRWME")
             cb_sesion.Items.Add("Dist. BRWME")
             cb_sesion.Items.Add("CONAVE")
+            cb_sesion.SelectedIndex = 0
+        ElseIf My.Settings.Empresa = 8 Then
+            cb_sesion.Items.Clear()
+            cb_sesion.Items.Add("Perú")
             cb_sesion.SelectedIndex = 0
         Else
 

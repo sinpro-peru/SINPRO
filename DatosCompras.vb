@@ -354,7 +354,7 @@ Public Class DatosCompras
             cb.Items.Add(New comboItem(dr("Marca"), dr("Marca")))
         End While
 
-        If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+        If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
             cb.Items.Add(New comboItem("Líneas Varias", "Líneas Varias"))
         End If
 

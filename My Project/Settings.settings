@@ -30,7 +30,7 @@
       <Value Profile="(Default)">Pruebas</Value>
     </Setting>
     <Setting Name="Empresa" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+      <Value Profile="(Default)">8</Value>
     </Setting>
     <Setting Name="UserLogin" Type="System.String" Scope="User">
       <Value Profile="(Default)">test</Value>
