@@ -4961,7 +4961,7 @@ Public Class Frm_Compras
 
             MELDataSet.EnforceConstraints = False
 
-            If My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                 Me.Sp_infoGeneralTableAdapter.Fill(Me.MELDataSet.sp_infoGeneral, 1)
             ElseIf My.Settings.Empresa = 1 Then
                 Me.Sp_infoGeneralTableAdapter.Fill(Me.MELDataSet.sp_infoGeneral, 2)
@@ -7839,7 +7839,7 @@ Public Class Frm_Compras
         End If
 
 
-        If My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+        If My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
             Me.Sp_infoGeneralTableAdapter.Fill(Me.MELDataSet.sp_infoGeneral, 1)
         ElseIf My.Settings.Empresa = 1 Or My.Settings.Empresa = 0 Then
             Me.Sp_infoGeneralTableAdapter.Fill(Me.MELDataSet.sp_infoGeneral, 2)
@@ -7854,7 +7854,7 @@ Public Class Frm_Compras
         End If
 
         If nrocompra = 0 And nroPedido = 0 Then
-            If My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                 Me.Sp_infoGeneralTableAdapter.Fill(Me.MELDataSet.sp_infoGeneral, 1)
             ElseIf My.Settings.Empresa = 1 Or My.Settings.Empresa = 0 Then
                 Me.Sp_infoGeneralTableAdapter.Fill(Me.MELDataSet.sp_infoGeneral, 2)

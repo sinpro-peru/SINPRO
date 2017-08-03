@@ -516,7 +516,7 @@ Public Class DatosFacturas
 
             While dr.Read
 
-                If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+                If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
 
                     If table.Rows.Count > 0 Then
 

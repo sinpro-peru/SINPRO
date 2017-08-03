@@ -74,7 +74,7 @@ Public Class DatosMovimientos
             command.CommandText = "sp_consulta_movimiento"
             command.Parameters.AddWithValue("@num", numDeposito)
 
-            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                 command.Parameters.AddWithValue("@fecha", Fecha)
                 command.Parameters.AddWithValue("@tipo", 2)
             End If
@@ -126,7 +126,7 @@ Public Class DatosMovimientos
             command.CommandText = "sp_consulta_movimiento"
             command.Parameters.AddWithValue("@num", numDeposito)
 
-            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                 command.Parameters.AddWithValue("@fecha", fecha)
                 command.Parameters.AddWithValue("@tipo", 2)
             End If
@@ -144,7 +144,7 @@ Public Class DatosMovimientos
                 command.Parameters.AddWithValue("@idcat", id_sub)
                 command.Parameters.AddWithValue("@tipo", tipo)
 
-                If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+                If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                     command.Parameters.AddWithValue("@fecha", fecha)
                 End If
 

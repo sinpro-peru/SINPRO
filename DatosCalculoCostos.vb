@@ -28,7 +28,7 @@ Public Class DatosCalculoCostos
             command.CommandType = CommandType.StoredProcedure
             command.Parameters.AddWithValue("@CodP", cod)
 
-            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                 command.CommandText = "sp_calculoCostos_BRWME"
             Else
                 command.CommandText = "sp_calculoCostos"

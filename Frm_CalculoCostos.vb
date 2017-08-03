@@ -67,7 +67,7 @@
             lbl_totalO.Text = Format(otros * 0, "#,##0.00")
         End If
 
-        If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+        If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
             Dgv_Costos.Columns(25).Visible = True
             Dgv_Costos.Columns(25).ReadOnly = True
         End If

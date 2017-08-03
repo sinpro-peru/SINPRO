@@ -224,6 +224,13 @@
                     exHoja.Cells.Item(3, 1) = "Tlf.: (0212)761.10.31"
                     exHoja.Cells.Item(4, 1) = "Email.: brwmesa@gmail.com"
 
+                ElseIf My.Settings.Empresa = 8 Then
+
+                    exHoja.Cells.Item(1, 1) = "Nombre empresa Perú, S.A."
+                    exHoja.Cells.Item(2, 1) = "RIF: J-11111111-1"
+                    exHoja.Cells.Item(3, 1) = "Tlf.: (1111)111.11.11"
+                    exHoja.Cells.Item(4, 1) = "Email.: peru@gmail.com"
+
                 End If
 
                 exHoja.Cells.Item(6, 1) = "Compra nro.: " + lbl_codigo.Text
@@ -517,6 +524,13 @@
                     exHoja.Cells.Item(2, 1) = "RIF: J-31135455-7"
                     exHoja.Cells.Item(3, 1) = "Tlf.: (0212)761.10.31"
                     exHoja.Cells.Item(4, 1) = "Email.: brwmesa@gmail.com"
+
+                ElseIf My.Settings.Empresa = 8 Then
+
+                    exHoja.Cells.Item(1, 1) = "Nombre empresa Perú, S.A."
+                    exHoja.Cells.Item(2, 1) = "RIF: J-11111111-1"
+                    exHoja.Cells.Item(3, 1) = "Tlf.: (1111)111.11.11"
+                    exHoja.Cells.Item(4, 1) = "Email.: peru@gmail.com"
 
                 End If
 

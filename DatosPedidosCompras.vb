@@ -1444,7 +1444,7 @@ Public Class DatosPedidosCompras
             dt.Rows.Clear()
             command.Parameters.Clear()
             command.CommandType = CommandType.StoredProcedure
-            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Then
+            If My.Settings.Empresa = 1 Or My.Settings.Empresa = 4 Or My.Settings.Empresa = 6 Or My.Settings.Empresa = 7 Or My.Settings.Empresa = 8 Then
                 command.CommandText = "sp_consulta_productos_nacionalizados_BRWME"
             Else
                 command.CommandText = "sp_consulta_productos_nacionalizados"
