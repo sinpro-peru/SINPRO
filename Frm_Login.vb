@@ -464,11 +464,11 @@ Public Class Frm_Login
                     Tesis_Nueva.My.Settings.PedidosExpress = False
 
                     If Not Frm_Principal.conex.State = ConnectionState.Open Then
-                        Frm_Principal.conex.ConnectionString = "Data Source=192.168.1.133;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                        Frm_Principal.conex.ConnectionString = "Data Source=192.168.1.135;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
                     End If
 
-                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=192.168.1.133;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
-                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=192.168.1.133;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=192.168.1.135;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=192.168.1.135;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
 
                     Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
                     Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"

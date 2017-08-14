@@ -3479,7 +3479,7 @@ Public Class Frm_Pedidos_Proveedores
         cb_proveedor.Tag = lb_proveedor.SelectedItem(0).ToString
         If lb_proveedor.SelectedIndex <> -1 Then
             'DatosPedidosCompras.Llenar_DGV_Productos_Por_Proveedor(CInt(cb_proveedor.Tag), DGV_Productos)
-            Sp_consultaProductosParaPedidoCompraTableAdapter.Fill(Me.MELDataSet.sp_consultaProductosParaPedidoCompra, "", cb_proveedor.Tag)
+            Sp_consultaProductosParaPedidoCompraTableAdapter.Fill(Me.MELDataSet.sp_consultaProductosParaPedidoCompra, "", CInt(cb_proveedor.Tag))
             DGV_Productos.ScrollBars = ScrollBars.None
             SpconsultaProductosParaPedidoCompraBindingSource.Filter = "Proveedor LIKE '%" & cb_proveedor.Tag & cb_proveedor.Text & "%'"
             DGV_Productos.ScrollBars = ScrollBars.Vertical

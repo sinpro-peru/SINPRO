@@ -3693,8 +3693,8 @@ Public Class Frm_Productos
                 For cont2 As Integer = 0 To lb_proveedor.Items.Count - 1
                     If lb_proveedor.Items(cont2).Item(0) = DGV_CodigoP.SelectedRows(0).Cells(0).Value.ToString Then
                         lb_proveedor.SelectedIndex = cont2
-                        cb_proveedor.Text = lb_proveedor.Items(cont2).Item(0).ToString
-                        cb_proveedor.Tag = lb_proveedor.Items(cont2).Item(1).ToString
+                        cb_proveedor.Text = lb_proveedor.Items(cont2).Item(1).ToString
+                        cb_proveedor.Tag = lb_proveedor.Items(cont2).Item(0).ToString
                     End If
 
                 Next
@@ -4302,8 +4302,8 @@ Public Class Frm_Productos
                     cb_proveedor.Focus()
                 End If
             ElseIf e.KeyData = Keys.Enter Then
-                cb_proveedor.Text = lb_proveedor.SelectedItem(0).ToString
-                cb_proveedor.Tag = lb_proveedor.SelectedItem(1).ToString
+                cb_proveedor.Text = lb_proveedor.SelectedItem(1).ToString
+                cb_proveedor.Tag = lb_proveedor.SelectedItem(0).ToString
                 'FillDGV()
                 lb_proveedor.SelectedIndex = 0
                 'cb_proveedor.Focus()
@@ -4319,8 +4319,8 @@ Public Class Frm_Productos
     Private Sub lb_proveedor_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles lb_proveedor.MouseClick
         Try
             lb_proveedor.Visible = False
-            cb_proveedor.Text = lb_proveedor.SelectedItem(0).ToString
-            cb_proveedor.Tag = lb_proveedor.SelectedItem(1).ToString
+            cb_proveedor.Text = lb_proveedor.SelectedItem(1).ToString
+            cb_proveedor.Tag = lb_proveedor.SelectedItem(0).ToString
             'FillDGV()
             lb_proveedor.SelectedIndex = 0
             'cb_proveedor.Focus()
@@ -4572,12 +4572,5 @@ Public Class Frm_Productos
         End If
     End Sub
 
-    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub groupbox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles groupbox1.Enter
-
-    End Sub
 End Class
 
