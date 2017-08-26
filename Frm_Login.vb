@@ -464,14 +464,14 @@ Public Class Frm_Login
                     Tesis_Nueva.My.Settings.PedidosExpress = False
 
                     If Not Frm_Principal.conex.State = ConnectionState.Open Then
-                        Frm_Principal.conex.ConnectionString = "Data Source=192.168.1.135;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                        Frm_Principal.conex.ConnectionString = "Data Source=192.168.1.7;Initial Catalog=BRWME;User ID=sinpro; Password=LimaPeru2017"
                     End If
 
-                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=192.168.1.135;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
-                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=192.168.1.135;Initial Catalog=SINPRO;User ID=sinpro; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=192.168.1.7;Initial Catalog=BRWME;User ID=sinpro; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=192.168.1.7;Initial Catalog=BRWME;User ID=sinpro; Password=LimaPeru2017"
 
-                    Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
-                    Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"
+                    Tesis_Nueva.My.Settings.DocsPrinter = "NPIF65311 (HP Lasejet MFP M130fw)"
+                    Tesis_Nueva.My.Settings.FactPrinter = "facturacion - epson lx-350 en 192.168.1.11"
 
                 ElseIf My.Settings.Empresa = 0 Then
 
@@ -680,8 +680,9 @@ Public Class Frm_Login
                 ElseIf cb_sesion.Text = "Perú" Then
 
                     My.Settings.Empresa = 8
-                    Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
-                    Tesis_Nueva.My.Settings.FactPrinter = "Epson LX-300+"
+
+                    Tesis_Nueva.My.Settings.DocsPrinter = "NPIF65311 (HP Lasejet MFP M130fw)"
+                    Tesis_Nueva.My.Settings.FactPrinter = "facturacion - epson lx-350 en 192.168.1.11"
 
                     Tesis_Nueva.My.Settings.CabezeraNC = False
                     Tesis_Nueva.My.Settings.Nro_Control_Editable = True
@@ -827,14 +828,14 @@ Public Class Frm_Login
                     Tesis_Nueva.My.Settings.CodigoFabricaFact = False
 
                     If Not Frm_Principal.conex.State = ConnectionState.Open Then
-                        Frm_Principal.conex.ConnectionString = "Data Source=tcp:brwmesaperu.dyndns.org;Initial Catalog=SINPRO; User ID=web; Password=LimaPeru2017"
+                        Frm_Principal.conex.ConnectionString = "Data Source=tcp:brwmeperu.dyndns.org;Initial Catalog=BRWME; User ID=sinpro; Password=LimaPeru2017"
                     End If
 
-                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=tcp:brwmesaperu.dyndns.org;Initial Catalog=SINPRO; User ID=web; Password=LimaPeru2017"
-                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=tcp:brwmesaperu.dyndns.org;Initial Catalog=SINPRO; User ID=web; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELConnectionString = "Data Source=tcp:brwmeperu.dyndns.org;Initial Catalog=BRWME; User ID=sinpro; Password=LimaPeru2017"
+                    Tesis_Nueva.My.Settings.MELPRUEBAConnectionString = "Data Source=tcp:brwmeperu.dyndns.org;Initial Catalog=BRWME; User ID=sinpro; Password=LimaPeru2017"
 
-                    Tesis_Nueva.My.Settings.DocsPrinter = "HP LaserJet Professional P1606dn"
-                    Tesis_Nueva.My.Settings.FactPrinter = "EPSON LX-300+/II (Copiar 1)"
+                    Tesis_Nueva.My.Settings.DocsPrinter = "NPIF65311 (HP Lasejet MFP M130fw)"
+                    Tesis_Nueva.My.Settings.FactPrinter = "facturacion - epson lx-350 en 192.168.1.11"
 
                 ElseIf My.Settings.Empresa = 0 Then
 

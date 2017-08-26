@@ -1361,39 +1361,45 @@ Public Class Datos
 
         dr.Close()
     End Sub
+
     Public Shared Sub consulta_Estados(ByRef cb As MTGCComboBox, ByVal n As Integer)
+
         cb.Items.Clear()
-        If n = 0 Then  'llanos
-            cb.Items.Add(New MTGCComboBoxItem("Apure"))
-            cb.Items.Add(New MTGCComboBoxItem("Barinas"))
-            cb.Items.Add(New MTGCComboBoxItem("Guárico"))
-        ElseIf n = 1 Then 'capital
-            cb.Items.Add(New MTGCComboBoxItem("Distrito Federal"))
-            cb.Items.Add(New MTGCComboBoxItem("Miranda"))
-            cb.Items.Add(New MTGCComboBoxItem("Vargas"))
-        ElseIf n = 2 Then 'centro y occidente
-            cb.Items.Add(New MTGCComboBoxItem("Aragua"))
-            cb.Items.Add(New MTGCComboBoxItem("Carabobo"))
-            cb.Items.Add(New MTGCComboBoxItem("Cojedes"))
-            cb.Items.Add(New MTGCComboBoxItem("Falcón"))
-            cb.Items.Add(New MTGCComboBoxItem("Lara"))
-            cb.Items.Add(New MTGCComboBoxItem("Portuguesa"))
-            cb.Items.Add(New MTGCComboBoxItem("Yaracuy"))
-            cb.Items.Add(New MTGCComboBoxItem("Zulia"))
-        ElseIf n = 3 Then  'los andes
-            cb.Items.Add(New MTGCComboBoxItem("Merida"))
-            cb.Items.Add(New MTGCComboBoxItem("Tachira"))
-            cb.Items.Add(New MTGCComboBoxItem("Trujillo"))
-        ElseIf n = 4 Then  'Oriente
-            cb.Items.Add(New MTGCComboBoxItem("Anzoategui"))
-            cb.Items.Add(New MTGCComboBoxItem("Monagas"))
-            cb.Items.Add(New MTGCComboBoxItem("Nueva Esparta"))
-            cb.Items.Add(New MTGCComboBoxItem("Sucre"))
-        ElseIf n = 5 Then 'sur
-            cb.Items.Add(New MTGCComboBoxItem("Amazonas"))
-            cb.Items.Add(New MTGCComboBoxItem("Bolívar"))
-            cb.Items.Add(New MTGCComboBoxItem("Delta Amacuro"))
-        End If
+
+        'If n = 0 Then  'llanos
+        '    cb.Items.Add(New MTGCComboBoxItem("Apure"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Barinas"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Guárico"))
+        'ElseIf n = 1 Then 'capital
+        '    cb.Items.Add(New MTGCComboBoxItem("Distrito Federal"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Miranda"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Vargas"))
+        'ElseIf n = 2 Then 'centro y occidente
+        '    cb.Items.Add(New MTGCComboBoxItem("Aragua"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Carabobo"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Cojedes"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Falcón"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Lara"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Portuguesa"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Yaracuy"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Zulia"))
+        'ElseIf n = 3 Then  'los andes
+        '    cb.Items.Add(New MTGCComboBoxItem("Merida"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Tachira"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Trujillo"))
+        'ElseIf n = 4 Then  'Oriente
+        '    cb.Items.Add(New MTGCComboBoxItem("Anzoategui"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Monagas"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Nueva Esparta"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Sucre"))
+        'ElseIf n = 5 Then 'sur
+        '    cb.Items.Add(New MTGCComboBoxItem("Amazonas"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Bolívar"))
+        '    cb.Items.Add(New MTGCComboBoxItem("Delta Amacuro"))
+        'End If
+
+        cb.Items.Add(New MTGCComboBoxItem("Perú"))
+
     End Sub
     Public Shared Sub clasificacionABC_Cliente(ByRef porcA As Integer, ByRef porcB As Integer, ByRef porcC As Integer)
         Dim par As Integer = 1

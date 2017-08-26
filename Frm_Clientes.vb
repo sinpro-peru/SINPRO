@@ -3243,9 +3243,11 @@ Public Class Frm_Clientes
     End Sub
 
     Private Sub tb_zona_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tb_zona.SelectedIndexChanged
+
         Me.tb_estado.Items.Clear()
         Me.tb_estado.Text = ""
-        If Me.tb_zona.SelectedItem.col1 = "Capital" Then
+
+        If Me.tb_zona.SelectedItem.col1 = "Perú" Then
             Datos.consulta_Estados(Me.tb_estado, 1)
         ElseIf Me.tb_zona.SelectedItem.col1 = "Centro y Occidente" Then
             Datos.consulta_Estados(Me.tb_estado, 2)
@@ -3260,6 +3262,7 @@ Public Class Frm_Clientes
         ElseIf Me.tb_zona.SelectedItem.col1 = "Venezuela" Then
             Datos.consulta_Estados(Me.tb_estado, 6)
         End If
+
     End Sub
     Private Sub tb_vendedor_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tb_vendedor.SelectedIndexChanged
         If varBoton = 1 Or (varBoton = 2 And chk_cambiarCod.Checked And chk_cambiarCod.Visible) Then

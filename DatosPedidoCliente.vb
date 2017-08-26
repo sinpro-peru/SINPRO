@@ -216,7 +216,7 @@ Imports System.Data.SqlClient
         command.Parameters.AddWithValue("@nom", s)
         command.Parameters.AddWithValue("@tipo", SqlDbType.Int).Value = val
         dr = command.ExecuteReader()
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
             While dr.Read
                 DGV.Rows.Add(dr("codigoPedido"), CStr(dr("fecha")), dr("CodigoCliente"), dr("razonSocial"), dr("Autorizado"), dr("Zona"), dr("MontoTotal"), "", "", "", dr("ModalidadEnvio"))
                 tot = tot + dr("MontoTotal")
@@ -244,7 +244,7 @@ Imports System.Data.SqlClient
             command.CommandType = CommandType.StoredProcedure
             command.CommandText = "sp_consultaPedidoCliente3"
             dr = command.ExecuteReader()
-            If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+            If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
                 While dr.Read
                     DGV.Rows.Add(dr("CodigoPedido"), dr("fecha"), dr("Codigo"), dr("razonSocial"), dr("Autorizado"), dr("Zona"), dr("RIF"), dr("MontoTotal"), "", dr("usuario"), dr("modalidadEnvio"))
                     tot = tot + dr("MontoTotal")
@@ -523,7 +523,7 @@ Imports System.Data.SqlClient
 
             If My.Settings.Empresa = 5 Then
                 command.Parameters.AddWithValue("@obsInt", obsint)
-            ElseIf My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+            ElseIf My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
                 command.Parameters.AddWithValue("@obsInt", obsint)
                 command.Parameters.AddWithValue("@user", usuario)
                 command.Parameters.AddWithValue("@modEnvio", modEnvio)
@@ -549,11 +549,11 @@ Imports System.Data.SqlClient
         command.Parameters.AddWithValue("@auto", auto)
         command.Parameters.AddWithValue("@bultos", bultos)
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 8 Then
             command.Parameters.AddWithValue("@obsInt", obsint)
         End If
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
             command.Parameters.AddWithValue("@modEnvio", modEnvio)
         End If
 
@@ -763,7 +763,7 @@ Imports System.Data.SqlClient
             Dias = dr("DiasCred")
         End If
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
 
             If dr("ObservacionInterna").GetType.ToString = "System.DBNull" Then
                 obsint = ""
@@ -796,7 +796,7 @@ Imports System.Data.SqlClient
             bultos = dr("bultos")
         End If
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
 
             If dr("usuario").GetType.ToString = "System.DBNull" Then
                 usuario = ""

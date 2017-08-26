@@ -28,6 +28,8 @@ Public Class R_Factura
             ReportViewer1.LocalReport.ReportEmbeddedResource = "Tesis_Nueva.Factura-CONAVE.rdlc"
         ElseIf My.Settings.Empresa = 7 Then
             ReportViewer1.LocalReport.ReportEmbeddedResource = "Tesis_Nueva.Factura-VENPER.rdlc"
+        ElseIf My.Settings.Empresa = 8 Then
+            ReportViewer1.LocalReport.ReportEmbeddedResource = "Tesis_Nueva.Factura-PERU.rdlc"
         Else
             ReportViewer1.LocalReport.ReportEmbeddedResource = "Tesis_Nueva.Factura.rdlc"
         End If

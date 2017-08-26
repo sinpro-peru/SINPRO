@@ -1010,6 +1010,7 @@
     <EmbeddedResource Include="Bultos.rdlc" />
     <EmbeddedResource Include="close.bmp" />
     <EmbeddedResource Include="Catalogo_Productos.rdlc" />
+    <EmbeddedResource Include="Factura-PERU.rdlc" />
     <EmbeddedResource Include="Nc-Descuento-VENPER.rdlc" />
     <EmbeddedResource Include="Nc-VENPER.rdlc" />
     <EmbeddedResource Include="Factura-VENPER.rdlc" />
@@ -1571,6 +1572,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.ico" />
+    <Content Include="Resources\Dominio.txt" />
     <None Include="Resources\NuevoPedido.html" />
     <None Include="Resources\MensajeFinalizado.html" />
     <None Include="Resources\ChequeDevuelto.html" />

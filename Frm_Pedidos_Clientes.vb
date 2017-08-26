@@ -2609,7 +2609,7 @@ Public Class Frm_Pedidos_Clientes
 
                         Frm_Principal.NotifyIcon1.ShowBalloonTip(5000, "SINPRO", "El Pedido '" + CStr(Me.DGV_Pedidos.SelectedRows(0).Cells(0).Value) + "' Ha Sido Eliminado Exitosamente", ToolTipIcon.Info)
 
-                        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 Then
+                        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 8 Then
                             DatosPedidoCliente.Consulta_totales_pedidos(lbl_pedPro.Text, lbl_clienPro.Text, lbl_pedNoPro.Text, lbl_clienNoPro.Text)
                         End If
 
@@ -2717,7 +2717,7 @@ Public Class Frm_Pedidos_Clientes
 
         End Try
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
 
             Label2.Visible = False
             Label7.Visible = False
@@ -2827,7 +2827,7 @@ Public Class Frm_Pedidos_Clientes
     Private Function llenos() As Boolean
         Dim ll As Boolean = False
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 8 Then
 
             If Me.cb_client.Text = "" Or Me.txt_finalVend.Tag Is Nothing Or tb_dias.Text = "" Or cb_modalidadEnvio.SelectedValue = 0 Or cb_modalidadEnvio.SelectedIndex = -1 Then
                 ll = True
@@ -2965,7 +2965,7 @@ Public Class Frm_Pedidos_Clientes
                     'End If
 
                     If boton = "p" Then
-                        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 Then
+                        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 8 Then
                             DatosPedidoCliente.Procesar_Pedido_NP(CInt(DGV_Pedidos.SelectedRows(0).Cells(0).Value))
                             DatosPedidoCliente.Eliminar_Pedidos_NP_Viejos()
                             Datos.Inserta_Actividad("Procesó el pedido nro. " + DGV_Pedidos.SelectedRows(0).Cells(0).Value.ToString + " del cliente (" + cb_client.Tag.ToString + ") " + cb_client.Text)
@@ -3115,7 +3115,7 @@ Public Class Frm_Pedidos_Clientes
                 rb_cargados_CheckedChanged(rb_pendientes, New EventArgs)
                 Me.Sp_consulta_Productos_PedidoClienteTableAdapter.Fill(Me.MELDataSet.sp_consulta_Productos_PedidoCliente)
 
-                If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+                If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
                     DatosPedidoCliente.Consulta_totales_pedidos(lbl_pedPro.Text, lbl_clienPro.Text, lbl_pedNoPro.Text, lbl_clienNoPro.Text)
 
                     'If rb_cargados.Checked Then
@@ -3241,7 +3241,7 @@ Public Class Frm_Pedidos_Clientes
         Dim cod2 As Integer = 0
         DatosPedidoCliente.consulta_pedido_producto_cliente(cped, Me.DGV_Productos_Pedido, Me.DateTimePicker1.Text, Me.tb_codigo.Text, Me.tb_monto.Text, lbl_iva.Text, lbl_Total.Text, Tb_Tlf1.Text, Tb_Tlf2.Text, Tb_Direccion.Text, tb_dias.Text, tb_obs.Text, chk_chequeado, tb_bultos.Text, COD, cod2, tb_obsInt.Text, tb_contacto.Text, tb_usuario.Text)
 
-        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 Then
+        If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 5 And My.Settings.Empresa <> 8 Then
             cb_modalidadEnvio.SelectedValue = DGV_Pedidos.SelectedRows(0).Cells(10).Value
         End If
 
@@ -3917,7 +3917,7 @@ Public Class Frm_Pedidos_Clientes
 
             If DGV_Pedidos.SelectedRows(0).Cells(2).Value.ToString.ToLower <> "no tiene" And DGV_Pedidos.SelectedRows(0).Cells(2).Value.ToString.ToLower.Trim <> "" Then
 
-                If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 Then
+                If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 8 Then
 
                     ToolBar1_ButtonClick(Me.ToolBar1, New System.Windows.Forms.ToolBarButtonClickEventArgs(bt_nuevo))
                     'TODO: This line of code loads data into the 'MELDataSet.sp_consulta_Productos_PedidoCliente' table. You can move, or remove it, as needed.
@@ -4697,7 +4697,7 @@ Public Class Frm_Pedidos_Clientes
 
         If rb_pendientes.Checked Then
 
-            If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 Then
+            If My.Settings.Empresa <> 1 And My.Settings.Empresa <> 4 And My.Settings.Empresa <> 6 And My.Settings.Empresa <> 7 And My.Settings.Empresa <> 8 Then
 
                 Me.lbl_TotalP.Text = "0,00"
 
